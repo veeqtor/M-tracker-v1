@@ -334,5 +334,8 @@ footer p {
     padding: 40px 60px;
 
   }
+  footer p {
+  font-size: 14px;
+}
 
 }

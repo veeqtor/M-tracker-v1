@@ -118,16 +118,46 @@ label {
 .btn {
   border-radius: 10px;
   background: transparent;
-  border: 1px solid #363851;
   padding: 0.25rem 1.25rem;
   color: #363851;
 }
 
-.btn:hover {
+.btn-default:hover {
   background: #363851;
   color: #fff;
 }
 
+.btn-default {
+	border: 1px solid #363851;
+}
+
+.btn-approve {
+   border: 1px solid green;
+   color: green;
+}
+.btn-approve:hover {
+  background: green;
+  color: #fff;
+}
+
+.btn-disapprove {
+	border: 1px solid red;
+	color: red;
+}
+.btn-disapprove:hover {
+  background: red;
+  color: #fff;
+}
+
+.btn-resolve {
+  border: 1px solid #1e90ff;
+  color: #1e90ff;
+}
+
+.btn-resolve:hover {
+  background: #1e90ff;
+  color: #fff;
+}
 header {
   background: #d8bfd8;
   display: block;
@@ -226,6 +256,39 @@ nav.nav-bar ul li {
   color: #fff !important;
 }
 
+.details{
+  list-style: none;
+  background: #bebebe;
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: 1px solid #bebebe;
+  box-shadow: 1px 4px 10px #bebebe;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.details div a{
+	margin:5px 5px 5px 5px;
+}
+
+.details li {
+  background: #fff;
+  display: block;
+  margin: 0 5px;
+  padding: 15px;
+  border-bottom: 1px solid #d8bfd8;
+}
+
+.details li:first-child{
+	border-top-left-radius: 5px; 
+	border-top-right-radius: 5px; 
+}
+.details li:last-child{
+	border-bottom-left-radius: 5px; 
+	border-bottom-right-radius: 5px;
+	margin-bottom: 10px;  
+}
+
 footer {
   background: #363851;
   width: 100%;
@@ -246,6 +309,10 @@ footer p {
    .wrapper {
    width: 90%;
   }
+  .details div a .btn{
+  	display: block;
+    text-align: center;
+}
 
 }
 

@@ -1,341 +1,353 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,900|Ubuntu:400,700');
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body, html {
-  font-family: 'Lato', sans-serif;
-  line-height: 1.4;
-  background: #eeeeee;
-  font-size: 14px;
-  height: 100%;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.4;
+    background: #eeeeee;
+    font-size: 14px;
+    height: 100%;
 }
 
 a {
-  text-decoration: none;
-  color: #363851;
+    text-decoration: none;
+    color: #363851;
 }
 
-/*a:hover{
-	color: #eeeeee;
-}*/
-
 .wrapper {
-  width: 50%;
-  margin: 0 auto;
-  min-height: 100%;
-  position: relative;
+    width: 70%;
+    margin: 0 auto;
+    min-height: 100%;
+    position: relative;
+}
 
+.flex {
+    display: flex;
+}
+
+.flex .col {
+    flex: 1;
+    margin: 10px;
 }
 
 .form-wrapper {
-  padding: 2%;
-  background: #F7F7F7;
-  border-radius: 3px;
-  width: 40%;
-  margin: 50px auto;
-  border-bottom: 1px solid #bebebe;
-  box-shadow: 1px 4px 10px #bebebe;
+    padding: 2%;
+    background: #F7F7F7;
+    border-radius: 3px;
+    width: 40%;
+    margin: 50px auto;
+    border-bottom: 1px solid #bebebe;
+    box-shadow: 1px 4px 10px #bebebe;
 }
 
 .input-group {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
 }
 
 .form-inner {
-  margin: 20px 5px;
-  padding-top: 20px;
-  border-top: 1px solid #d8bfd8;
+    margin: 20px 5px;
+    padding-top: 20px;
+    border-top: 1px solid #d8bfd8;
 }
 
 h2.title {
-  text-transform: uppercase;
-  color: #363851;
-  letter-spacing: 2px;
-  text-align: center;
-  font-weight: 900;
-  font-size: 2em;
-  padding: 2%;
-  font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    color: #363851;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 2em;
+    padding: 2%;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 input[type="text"],
 input[type="password"],
 input[type="email"],
 textarea, select {
-  margin: 10px 0;
-  border-radius: 10px;
-  border: 1px solid #D6D6D6;
-  padding: 8px 5px;
+    margin: 10px 0;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #D6D6D6;
+    padding: 8px 5px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 2px;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  outline: none;
-  border: 1px solid #d8bfd8;
+    background: #fff;
+    outline: none;
+    border: 1px solid #d8bfd8;
 }
-
-input[type="submit"] {
-  text-align: center;
-  border: none;
-  border-radius: 10px;
-  background: #363851;
-  color: #bebebe;
-  padding: 5px;
-  margin: 2% 0;
-}
-
-input[type="submit"]:hover {
-  color: #fff;
-  background: #30324B;
+input[type="submit"]{
+    margin: 10px;
 }
 
 .input-group p {
-  text-align: center;
+    text-align: center;
 }
 
 .input-group a {
-  text-decoration: none;
-  text-align: center;
-  color: #363851;
-  font-size: 1.05em;
+    text-decoration: none;
+    text-align: center;
+    color: #363851;
+    font-size: 1.05em;
+
 }
 
 label {
-  display: inline-block;
-  font-weight: 200;
-  letter-spacing: 1px;
-  font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .btn {
-  border-radius: 10px;
-  background: transparent;
-  padding: 0.25rem 1.25rem;
-  color: #363851;
+    border-radius: 10px;
+    background: transparent;
+    padding: 0.25rem 1.25rem;
+    color: #363851;
 }
 
 .btn-default:hover {
-  background: #363851;
-  color: #fff;
+    background: #363851;
+    color: #fff;
 }
 
 .btn-default {
-	border: 1px solid #363851;
+    border: 1px solid #363851;
 }
 
 .btn-approve {
-   border: 1px solid green;
-   color: green;
+    border: 1px solid green;
+    color: green;
 }
+
 .btn-approve:hover {
-  background: green;
-  color: #fff;
+    background: green;
+    color: #fff;
 }
 
 .btn-disapprove {
-	border: 1px solid red;
-	color: red;
+    border: 1px solid red;
+    color: red;
 }
+
 .btn-disapprove:hover {
-  background: red;
-  color: #fff;
+    background: red;
+    color: #fff;
 }
 
 .btn-resolve {
-  border: 1px solid #1e90ff;
-  color: #1e90ff;
+    border: 1px solid #1e90ff;
+    color: #1e90ff;
 }
 
 .btn-resolve:hover {
-  background: #1e90ff;
-  color: #fff;
+    background: #1e90ff;
+    color: #fff;
 }
+
 header {
-  background: #d8bfd8;
-  display: block;
-  width: 100%;
-  text-align: center;
-  border-bottom: 1px solid #363851;
-  /*box-shadow: 1px 4px 10px #bebebe;*/
-  height: 100px;
+    background: #d8bfd8;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #363851;
+    /*box-shadow: 1px 4px 10px #bebebe;*/
+    height: 100px;
 }
 
 .brand {
-  text-transform: uppercase;
-  font-size: 26px;
-  letter-spacing: 5px;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 900;
-  border-bottom: 1px solid #6aa1c4;
+    text-transform: uppercase;
+    font-size: 26px;
+    letter-spacing: 5px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
+    border-bottom: 1px solid #6aa1c4;
 }
 
 nav.nav-bar ul li {
-  list-style: none;
-  padding: 20px 0;
+    list-style: none;
+    padding: 20px 0;
 }
 
-.list-header h3 {
-  text-transform: uppercase;
-  color: #363851;
-  border-bottom: 1px solid #d8bfd8;
-  margin: 5px;
-  padding: 15px 0;
-  font-size: 20px;
-  text-align: center;
+h3 {
+    text-transform: uppercase;
+    color: #363851;
+    border-bottom: 1px solid #d8bfd8;
+    margin: 5px;
+    padding: 15px 0;
+    font-size: 20px;
+    text-align: center;
 }
 
 .requests {
-  list-style: none;
+    list-style: none;
 
 }
 
 .requests li a {
-  background: #fff;
-  display: block;
-  margin: 10px 0 15px;
-  padding: 10px;
-  overflow: hidden;
-  border-bottom: 1px solid #d8bfd8;
+    background: #fff;
+    display: block;
+    margin: 10px 0 15px;
+    padding: 10px;
+    overflow: hidden;
+    border-bottom: 1px solid #d8bfd8;
 }
 
 .label {
-  margin: 5px 5px 5px 0;
-  padding: 2px 5px;
-  display: block;
-  font-size: 10px;
-  float: right;
-  border-radius: 10px;
+    margin: 5px 5px 5px 0;
+    padding: 2px 5px;
+    display: block;
+    font-size: 10px;
+    float: right;
+    border-radius: 10px;
 }
 
 .label-approved {
-  background: green;
-  color: #fff;
+    background: green;
+    color: #fff;
 }
 
 .label-disapproved {
-  background: red;
-  color: #fff;
+    background: red;
+    color: #fff;
 }
 
 .label-resolved {
-  background: #1e90ff;
-  color: #111;
+    background: #1e90ff;
+    color: #111;
 }
 
 .label-pending {
-  background: #ffff00;
-  color: #111;
+    background: #ffff00;
+    color: #111;
 }
 
 .pagination {
-  list-style: none;
-  overflow: hidden;
+    list-style: none;
+    overflow: hidden;
 }
 
 .pg-link a {
-  display: block;
-  float: left;
-  margin: 10px 0;
-  padding: 5px 10px;
-  border: 1px solid #363851;
-  border-radius: 5px;
-  background: inherit;
-  color: inherit;
+    display: block;
+    float: left;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border: 1px solid #363851;
+    border-radius: 5px;
+    background: inherit;
+    color: inherit;
 }
 
 .active {
-  background-color: #363851 !important;
-  color: #fff !important;
+    background-color: #363851 !important;
+    color: #fff !important;
 }
 
-.details{
-  list-style: none;
-  background: #bebebe;
-  padding: 10px;
-  border-radius: 5px;
-  border-bottom: 1px solid #bebebe;
-  box-shadow: 1px 4px 10px #bebebe;
-  margin-bottom: 20px;
-  overflow: hidden;
+.details {
+    list-style: none;
+    background: #cecece;
+    padding: 10px;
+    border-radius: 5px;
+    border-bottom: 1px solid #bebebe;
+    /*box-shadow: 1px 4px 10px #bebebe;*/
+    margin-bottom: 20px;
+    overflow: hidden;
 }
 
-.details div a{
-	margin:5px 5px 5px 5px;
+.details div a {
+    margin: 5px 5px 5px 5px;
 }
 
 .details li {
-  background: #fff;
-  display: block;
-  margin: 0 5px;
-  padding: 15px;
-  border-bottom: 1px solid #d8bfd8;
+    background: #fff;
+    display: block;
+    margin: 0 5px;
+    padding: 15px;
+    border-bottom: 1px solid #d8bfd8;
 }
 
-.details li:first-child{
-	border-top-left-radius: 5px; 
-	border-top-right-radius: 5px; 
+.details li:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
-.details li:last-child{
-	border-bottom-left-radius: 5px; 
-	border-bottom-right-radius: 5px;
-	margin-bottom: 10px;  
+
+.details li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 10px;
 }
 
 footer {
-  background: #363851;
-  width: 100%;
+    background: #363851;
+    width: 100%;
 }
 
 footer p {
-  text-align: center;
-  color: #fff;
-  padding: 10px;
-  font-size: 11px;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    font-size: 11px;
 }
 
 /** Media queries **/
-@media all and (max-width: 900px) {
-  .form-wrapper {
-    width: 90%;
-  }
-   .wrapper {
-   width: 90%;
-  }
-  .details div a .btn{
-  	display: block;
-    text-align: center;
+@media only screen and (max-width: 900px) {
+    .form-wrapper {
+        width: 90%;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .details div a .btn {
+        display: block;
+        text-align: center;
+    }
+
+    .flex{
+        display: block;
+    }
+    .flex .col {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
 }
 
-}
+@media only screen and (min-width: 900px) {
 
-@media only screen and (min-width: 1000px) {
+    header {
+        display: inline-block;
+        text-align: left;
+    }
 
-  header {
-    display: inline-block;
-    text-align: left;
-  }
+    .brand {
+        padding: 30px 60px;
+        border: none;
+        float: left;
+    }
 
-  .brand {
-    padding: 30px 60px;
-    border: none;
-    float: left;
-  }
+    nav.nav-bar ul li {
+        float: right;
+        padding: 40px 60px;
 
-  nav.nav-bar ul li {
-    float: right;
-    padding: 40px 60px;
+    }
 
-  }
-  footer p {
-  font-size: 14px;
-}
+    footer p {
+        font-size: 14px;
+    }
 
 }

@@ -48,7 +48,7 @@ a {
 .input-group {
     display: flex;
     flex-direction: column;
-    padding: 10px 0px;
+    padding: 10px 0;
 }
 
 .form-inner {
@@ -90,8 +90,9 @@ textarea:focus {
     outline: none;
     border: 1px solid #d8bfd8;
 }
-input[type="submit"]{
-    margin: 10px;
+
+input[type="submit"] {
+    margin: 10px 0;
 }
 
 .input-group p {
@@ -130,22 +131,22 @@ label {
 }
 
 .btn-approve {
-    border: 1px solid green;
-    color: green;
+    border: 1px solid #21801f;
+    color: #21801f;
 }
 
 .btn-approve:hover {
-    background: green;
+    background: #21801f;
     color: #fff;
 }
 
 .btn-disapprove {
-    border: 1px solid red;
-    color: red;
+    border: 1px solid #ff4f4f;
+    color: #ff4f4f;
 }
 
 .btn-disapprove:hover {
-    background: red;
+    background: #ff4f4f;
     color: #fff;
 }
 
@@ -165,7 +166,6 @@ header {
     width: 100%;
     text-align: center;
     border-bottom: 1px solid #363851;
-    /*box-shadow: 1px 4px 10px #bebebe;*/
     height: 100px;
 }
 
@@ -206,6 +206,7 @@ h3 {
     overflow: hidden;
     border-bottom: 1px solid #d8bfd8;
 }
+
 .request-date {
     margin: 5px 0 5px 5px;
     padding: 2px 0;
@@ -226,12 +227,12 @@ h3 {
 }
 
 .label-approved {
-    background: green;
+    background: #21801f;
     color: #fff;
 }
 
 .label-disapproved {
-    background: red;
+    background: #ff4f4f;
     color: #fff;
 }
 
@@ -241,7 +242,7 @@ h3 {
 }
 
 .label-pending {
-    background: #ffff00;
+    background: #f6ff6c;
     color: #111;
 }
 
@@ -251,13 +252,14 @@ h3 {
     margin: 10px 0;
 }
 
-.pagination li{
+.pagination li {
     display: block;
     float: left;
     margin: 10px 0;
     padding: 2px 8px;
     border: 1px solid #363851;
 }
+
 .pagination li:first-child {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -271,13 +273,9 @@ h3 {
 .pagination li.active {
     background: #363851 !important;
 }
+
 .pagination li.active a {
     color: #fff;
-}
-
-.active {
-    background-color: #363851 !important;
-    color: #fff !important;
 }
 
 .details {
@@ -286,7 +284,6 @@ h3 {
     padding: 10px;
     border-radius: 5px;
     border-bottom: 1px solid #bebebe;
-    /*box-shadow: 1px 4px 10px #bebebe;*/
     margin-bottom: 20px;
     overflow: hidden;
 }
@@ -326,6 +323,27 @@ footer p {
     font-size: 11px;
 }
 
+.features {
+    list-style: none;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding-top: 150px;
+}
+
+.features li {
+    background: #6aa1c4;
+    border-bottom: 1px solid #d8bfd8;
+    margin: 15px 0;
+    padding: 5px;
+}
+
+.features li a {
+    display: block;
+    color: #363851;
+}
+
 /** Media queries **/
 @media only screen and (max-width: 900px) {
     .form-wrapper {
@@ -341,9 +359,10 @@ footer p {
         text-align: center;
     }
 
-    .flex{
+    .flex {
         display: block;
     }
+
     .flex .col {
         width: 100%;
         margin: 0 0 10px 0;
@@ -372,5 +391,4 @@ footer p {
     footer p {
         font-size: 14px;
     }
-
 }

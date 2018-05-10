@@ -166,7 +166,7 @@ header {
     width: 100%;
     text-align: center;
     border-bottom: 1px solid #363851;
-    height: 100px;
+    min-height: 100px;
 }
 
 .brand {

@@ -1,0 +1,23 @@
+{
+  "name": "m-tracker",
+  "version": "1.0.0",
+  "description": "API for Maintenance-tracker",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veeqtor/M-tracker.git"
+  },
+  "keywords": [
+    "API",
+    "RESTFUL"
+  ],
+  "author": "Nwokeocha Victor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veeqtor/M-tracker/issues"
+  },
+  "homepage": "https://github.com/veeqtor/M-tracker#readme"
+}

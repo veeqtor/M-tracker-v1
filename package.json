@@ -4,7 +4,7 @@
   "description": "API for Maintenance-tracker",
   "main": "app.js",
   "scripts": {
-    "test": "mocha --require babel-register",
+    "test": "mocha --require babel-register api/tests/",
     "start": "nodemon -r babel-register server.js"
   },
   "repository": {

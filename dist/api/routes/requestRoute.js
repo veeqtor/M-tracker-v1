@@ -18,5 +18,7 @@ var router = _express2.default.Router();
 
 router.get('/', _requestsController2.default.get_all_requests);
 
+router.get('/:requestId', _requestsController2.default.get_a_request);
+
 exports.default = router;
 //# sourceMappingURL=requestRoute.js.map

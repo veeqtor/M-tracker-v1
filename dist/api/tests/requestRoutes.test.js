@@ -47,6 +47,7 @@ describe('API ENDPOINT', function () {
       server.get('/api/v1/users/requests').end(function (err, res) {
         Expect(res.statusCode).to.equal(200);
         Expect(res).to.be.an('object');
+        Expect(res.body).to.be.an('array');
       });
       return done();
     });

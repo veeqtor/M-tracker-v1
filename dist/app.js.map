@@ -1,1 +1,1 @@
-{"version":3,"sources":["../app.js"],"names":["app"],"mappings":";;;;;;AAAA;;;;AAEA;;;;;;AAEA,IAAMA,MAAM,wBAAZ;;kBAEeA,G","file":"app.js","sourcesContent":["import express from 'express';\n\nimport bodyParser from 'body-parser';\n\nconst app = express();\n\nexport default app;\n"]}
+{"version":3,"sources":["../app.js"],"names":["app"],"mappings":";;;;;;AAAA;;;;AAEA;;;;;;AAEA,IAAMA,MAAM,wBAAZ;;kBAEeA,G","file":"app.js","sourcesContent":["import express from 'express';\r\n\r\nimport bodyParser from 'body-parser';\r\n\r\nconst app = express();\r\n\r\nexport default app;\r\n"]}

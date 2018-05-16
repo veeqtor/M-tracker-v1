@@ -4,7 +4,8 @@
   "description": "API for Maintenance-tracker",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require babel-register",
+    "start": "nodemon -r babel-register "
   },
   "repository": {
     "type": "git",
@@ -22,9 +23,20 @@
   "homepage": "https://github.com/veeqtor/M-tracker#readme",
   "dependencies": {
     "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0"
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.4",
+    "supertest": "^3.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "mocha": "^5.1.1"
   }
 }

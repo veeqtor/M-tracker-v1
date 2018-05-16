@@ -20,5 +20,7 @@ router.get('/', _requestsController2.default.get_all_requests);
 
 router.get('/:requestId', _requestsController2.default.get_a_request);
 
+router.post('/', _requestsController2.default.create_a_request);
+
 exports.default = router;
 //# sourceMappingURL=requestRoute.js.map

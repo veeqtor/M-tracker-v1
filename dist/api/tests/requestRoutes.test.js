@@ -18,36 +18,62 @@ var server = _supertest2.default.agent(_app2.default);
 
 var Expect = _chai2.default.expect;
 
-var data = [{
-  id: 110,
-  name: 'John doe',
-  email: 'example@gmail.com',
-  date: '2018-10-13',
-  dept: 'Accounts',
-  message: 'Lorem ipsum '
-}, {
-  id: 120,
-  name: 'Jane doe',
-  email: 'janedoe@gmail.com',
-  date: '2014-1-25',
-  dept: 'Engineering',
-  message: 'Lorem ipsum Lorem ipsum Lorem'
-}, {
-  id: 130,
-  name: 'Frank Moore',
-  email: 'frankmoore@examplemail.me',
-  date: '2011-8-1',
-  dept: 'Logistics',
-  message: 'Lorem ipsum Lorem ipsum Lorem ipsum '
-}];
-
 describe('API ENDPOINT', function () {
   describe('GET request( /request )', function () {
-    it('Should get response as JSON and and array of objects ', function (done) {
+    it('Should get an array of objects ', function (done) {
       server.get('/api/v1/users/requests').end(function (err, res) {
         Expect(res.statusCode).to.equal(200);
         Expect(res).to.be.an('object');
-        Expect(res.body).to.be.an('array');
+        Expect(res.body.data).to.be.an('array');
+      });
+      return done();
+    });
+
+    it('Should get an object', function (done) {
+      server.get('/api/v1/users/requests/110').end(function (err, res) {
+        Expect(res.statusCode).to.equal(200);
+        Expect(res).to.be.an('object');
+      });
+      return done();
+    });
+
+    it('Should get Not found', function (done) {
+      server.get('/api/v1/users/requests/1100').end(function (err, res) {
+        Expect(res.statusCode).to.equal(404);
+      });
+      return done();
+    });
+  });
+
+  describe('POST request( /request )', function () {
+    var data = {
+      id: '140',
+      name: 'Janet May',
+      email: 'janetMaye@yahoomail.com',
+      date: '2011-11-21',
+      dept: 'Engineering HQ',
+      message: 'Lorem ipsum owjjfndfnmnxnfj Lorem ipsum Lorem'
+    };
+
+    var data2 = {
+      id: 140,
+      name: 'Janet May',
+      email: 'janetMaye@yahoomail.com',
+      date: '2011-11-21',
+      dept: 'Engineering HQ',
+      message: 'Lorem ipsum owjjfndfnmnxnfj Lorem ipsum Lorem'
+    };
+
+    it('Should get a status code 201', function (done) {
+      server.post('/api/v1/users/requests').send(data2).end(function (err, res) {
+        Expect(res.statusCode).to.equal(201);
+      });
+      return done();
+    });
+
+    it('Should get a status code 400', function (done) {
+      server.post('/api/v1/users/requests').send(data).end(function (err, res) {
+        Expect(res.statusCode).to.equal(400);
       });
       return done();
     });

@@ -95,7 +95,7 @@ exports.default = {
     var id = parseInt(req.params.requestId, 10);
     for (var i = 0; i < global.data.length; i += 1) {
       if (global.data[i].id === id) {
-        global.data.splice(global.data[i], 1);
+        global.data.splice(i, 1);
         return res.status(200).json({
           status: 'Success',
           message: 'Request deleted successfully'

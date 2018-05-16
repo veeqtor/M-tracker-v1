@@ -12,6 +12,8 @@ router.post('/', requestController.create_a_request);
 
 router.put('/:requestId', requestController.modify_a_request);
 
+router.delete('/:requestId', requestController.delete_a_request);
+
 
 export default router;
 

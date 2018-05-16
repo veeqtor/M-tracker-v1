@@ -90,6 +90,22 @@ exports.default = {
       status: 'fail',
       message: 'Not found'
     });
+  },
+  delete_a_request: function delete_a_request(req, res) {
+    var id = parseInt(req.params.requestId, 10);
+    for (var i = 0; i < global.data.length; i += 1) {
+      if (global.data[i].id === id) {
+        global.data.splice(global.data[i], 1);
+        return res.status(200).json({
+          status: 'Success',
+          message: 'Request deleted successfully'
+        });
+      }
+    }
+    return res.status(404).json({
+      status: 'Fail',
+      message: 'Not found'
+    });
   }
 };
 //# sourceMappingURL=requestsController.js.map

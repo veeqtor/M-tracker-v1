@@ -112,4 +112,24 @@ describe('API ENDPOINT', () => {
       return done();
     });
   });
+
+  describe('DELETE request( /request/:requestId )', () => {
+    it('Should get an array of objects ', (done) => {
+      server
+        .put('/api/v1/users/requests/110')
+        .end((err, res) => {
+          Expect(res.statusCode).to.equal(200);
+        });
+      return done();
+    });
+
+    it('Should get Not found', (done) => {
+      server
+        .put('/api/v1/users/requests/1100')
+        .end((err, res) => {
+          Expect(res.statusCode).to.equal(404);
+        });
+      return done();
+    });
+  });
 });

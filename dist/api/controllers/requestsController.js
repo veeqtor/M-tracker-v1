@@ -32,7 +32,10 @@ global.data = [{
 exports.default = {
   get_all_requests: function get_all_requests(req, res) {
     if (global.data.length !== 0) {
-      return res.status(200).json(global.data);
+      return res.status(200).json({
+        status: 'Success',
+        data: global.data
+      });
     }
     return res.status(204).end();
   },
@@ -42,12 +45,28 @@ exports.default = {
     for (var i = 0; i < global.data.length; i += 1) {
       if (global.data[i].id === id) {
         return res.status(200).json({
-          result: global.data[i]
+          status: 'Success',
+          data: global.data[i]
         });
       }
     }
     return res.status(404).json({
-      result: 'Not found'
+      status: 'fail',
+      message: 'Not found'
+    });
+  },
+
+  create_a_request: function create_a_request(req, res) {
+    if (typeof req.body.id === 'number') {
+      global.data.push(req.body);
+      return res.status(201).json({
+        status: 'Success',
+        message: 'Request Created successfully'
+      });
+    }
+    return res.status(400).json({
+      status: 'Fail',
+      message: 'Bad Request'
     });
   }
 };

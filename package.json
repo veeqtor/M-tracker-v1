@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/veeqtor/M-tracker/issues"
   },
-  "homepage": "https://github.com/veeqtor/M-tracker#readme"
+  "homepage": "https://github.com/veeqtor/M-tracker#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
 }

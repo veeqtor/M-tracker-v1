@@ -58,6 +58,7 @@ exports.default = {
 
   create_a_request: function create_a_request(req, res) {
     if (typeof req.body.id === 'number') {
+      req.body.Url = 'http://localhost:5000/api/v1/users/requests/' + req.body.id;
       global.data.push(req.body);
       return res.status(201).json({
         status: 'Success',
@@ -67,6 +68,27 @@ exports.default = {
     return res.status(400).json({
       status: 'Fail',
       message: 'Bad Request'
+    });
+  },
+
+  modify_a_request: function modify_a_request(req, res) {
+    var id = parseInt(req.params.requestId, 10);
+    for (var i = 0; i < global.data.length; i += 1) {
+      if (global.data[i].id === id) {
+        global.data[i].name = req.body.name;
+        global.data[i].email = req.body.email;
+        global.data[i].date = req.body.date;
+        global.data[i].dept = req.body.dept;
+        global.data[i].message = req.body.message;
+        return res.status(200).json({
+          status: 'Success',
+          data: global.data[i]
+        });
+      }
+    }
+    return res.status(404).json({
+      status: 'fail',
+      message: 'Not found'
     });
   }
 };

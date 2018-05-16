@@ -81,4 +81,35 @@ describe('API ENDPOINT', () => {
       return done();
     });
   });
+
+  describe('PUT request( /request/:requestId )', () => {
+    const data3 = {
+      name: 'Janet May',
+      email: 'janetMaye@yahoomail.com',
+      date: '2011-11-21',
+      dept: 'Engineering HQ',
+      message: 'Lorem ipsum owjjfndfnmnxnfj Lorem ipsum Lorem',
+    };
+
+    it('Should get an array of objects ', (done) => {
+      server
+        .put('/api/v1/users/requests/110')
+        .send(data3)
+        .end((err, res) => {
+          Expect(res.statusCode).to.equal(200);
+          Expect(res).to.be.an('object');
+          Expect(res.body.data).to.be.an('object');
+        });
+      return done();
+    });
+
+    it('Should get Not found', (done) => {
+      server
+        .put('/api/v1/users/requests/1100')
+        .end((err, res) => {
+          Expect(res.statusCode).to.equal(404);
+        });
+      return done();
+    });
+  });
 });

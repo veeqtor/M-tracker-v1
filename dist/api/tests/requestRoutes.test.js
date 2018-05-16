@@ -78,5 +78,31 @@ describe('API ENDPOINT', function () {
       return done();
     });
   });
+
+  describe('PUT request( /request/:requestId )', function () {
+    var data3 = {
+      name: 'Janet May',
+      email: 'janetMaye@yahoomail.com',
+      date: '2011-11-21',
+      dept: 'Engineering HQ',
+      message: 'Lorem ipsum owjjfndfnmnxnfj Lorem ipsum Lorem'
+    };
+
+    it('Should get an array of objects ', function (done) {
+      server.put('/api/v1/users/requests/110').send(data3).end(function (err, res) {
+        Expect(res.statusCode).to.equal(200);
+        Expect(res).to.be.an('object');
+        Expect(res.body.data).to.be.an('object');
+      });
+      return done();
+    });
+
+    it('Should get Not found', function (done) {
+      server.put('/api/v1/users/requests/1100').end(function (err, res) {
+        Expect(res.statusCode).to.equal(404);
+      });
+      return done();
+    });
+  });
 });
 //# sourceMappingURL=requestRoutes.test.js.map

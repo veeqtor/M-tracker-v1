@@ -104,5 +104,21 @@ describe('API ENDPOINT', function () {
       return done();
     });
   });
+
+  describe('DELETE request( /request/:requestId )', function () {
+    it('Should get an array of objects ', function (done) {
+      server.put('/api/v1/users/requests/110').end(function (err, res) {
+        Expect(res.statusCode).to.equal(200);
+      });
+      return done();
+    });
+
+    it('Should get Not found', function (done) {
+      server.put('/api/v1/users/requests/1100').end(function (err, res) {
+        Expect(res.statusCode).to.equal(404);
+      });
+      return done();
+    });
+  });
 });
 //# sourceMappingURL=requestRoutes.test.js.map

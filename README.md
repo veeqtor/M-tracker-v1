@@ -1,4 +1,4 @@
-
+[![Build Status](https://travis-ci.org/veeqtor/M-tracker.svg?branch=ch-integrate-travisCI-157648378)](https://travis-ci.org/veeqtor/M-tracker) [![Coverage Status](https://coveralls.io/repos/github/veeqtor/M-tracker/badge.svg?branch=ch-integrate-travisCI-157648378)](https://coveralls.io/github/veeqtor/M-tracker?branch=ch-integrate-travisCI-157648378) [![Maintainability](https://api.codeclimate.com/v1/badges/ecbcabd190ca98ce3b31/maintainability)](https://codeclimate.com/github/veeqtor/M-tracker/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/ecbcabd190ca98ce3b31/test_coverage)](https://codeclimate.com/github/veeqtor/M-tracker/test_coverage)
 
 
 # M-tracker

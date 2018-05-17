@@ -1,5 +1,5 @@
 .idea/
 node_modules/
-.nyc_ouput/
+.nyc_output/
 coverage/
 

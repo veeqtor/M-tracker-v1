@@ -4,21 +4,21 @@ node_js:
  - "8.11.1"
 
 before_install:
-- npm install -g mocha
+  - npm install -g mocha
+  - npm install
+#  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+#  - chmod +x ./cc-test-reporter
 
 before_script:
- - npm install
- - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
- - chmod +x ./cc-test-reporter
- - ./cc-test-reporter before-build
+# - ./cc-test-reporter before-build
 
 script:
  - npm run test
+# - nyc --reporter=lcov npm run unit
 
 after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+#   - ./cc-test-reporter after-build --exit-code $EXIT_CODE
 
 after_success:
-
  - npm run coverage
  - codeclimate-test-reporter < coverage/lcov.info

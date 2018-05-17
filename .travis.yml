@@ -5,9 +5,6 @@ node_js:
 
 before_install:
 - npm install -g mocha
-- npm install -g coveralls
-- npm install -g mocha-lcov-reporter
-- npm install -g jscoverage
 
 before_script:
  - npm install

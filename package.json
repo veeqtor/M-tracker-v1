@@ -36,13 +36,14 @@
     "eslint-plugin-react": "^7.8.2",
     "express": "^4.16.3",
     "nodemon": "^1.17.4",
-    "supertest": "^3.1.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "supertest": "^3.1.0",
     "coveralls": "^3.0.1",
     "istanbul": "^0.4.5",
     "mocha": "^5.1.1",
     "nyc": "^11.8.0"
+  },
+
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
   }
 }

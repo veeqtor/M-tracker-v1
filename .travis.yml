@@ -3,8 +3,7 @@ language: node_js
 node_js:
  - "8.11.1"
  
-machine:
-  environment:
+ env:
     CC_TEST_REPORTER_ID: a1951c2cbfb022c642a0b4ada7dfd7a0f3e2555f1acf5cd8e1f8485fae006c0e
 
 before_install:

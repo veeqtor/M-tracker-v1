@@ -6,7 +6,7 @@
   "scripts": {
     "test": "nyc --reporter=html --reporter=text mocha --require babel-register api/tests/*",
     "start": "nodemon -r babel-register server.js",
-    "coverage": "nyc report --reporter=text-summary | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",

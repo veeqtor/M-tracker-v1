@@ -6,7 +6,6 @@ import path from 'path';
 
 import requestRoute from './api/routes/requestRoute';
 
-
 const app = express();
 
 app.use(bodyParser.json());

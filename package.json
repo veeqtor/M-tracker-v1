@@ -1,0 +1,46 @@
+{
+  "name": "m-tracker",
+  "version": "1.0.0",
+  "description": "API for Maintenance-tracker",
+  "main": "app.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha --require babel-register api/tests/*",
+    "start": "nodemon -r babel-register server.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veeqtor/M-tracker.git"
+  },
+  "keywords": [
+    "API",
+    "RESTFUL"
+  ],
+  "author": "Nwokeocha Victor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veeqtor/M-tracker/issues"
+  },
+  "homepage": "https://github.com/veeqtor/M-tracker#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "express": "^4.16.3",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.1.1",
+    "nodemon": "^1.17.4",
+    "nyc": "^11.8.0",
+    "supertest": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}

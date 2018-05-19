@@ -10,7 +10,7 @@ global.data = [{
   date: '2018-10-13',
   dept: 'Accounts',
   message: 'Lorem ipsum ',
-  Url: 'http://localhost:5000/api/v1/users/requests/110'
+  Url: '/api/v1/users/requests/110'
 }, {
   id: 120,
   name: 'Jane doe',
@@ -18,7 +18,7 @@ global.data = [{
   date: '2014-1-25',
   dept: 'Engineering',
   message: 'Lorem ipsum Lorem ipsum Lorem',
-  Url: 'http://localhost:5000/api/v1/users/requests/120'
+  Url: '/api/v1/users/requests/120'
 }, {
   id: 130,
   name: 'Frank Moore',
@@ -26,7 +26,7 @@ global.data = [{
   date: '2011-8-1',
   dept: 'Logistics',
   message: 'Lorem ipsum Lorem ipsum Lorem ipsum ',
-  Url: 'http://localhost:5000/api/v1/users/requests/130'
+  Url: '/api/v1/users/requests/130'
 }];
 
 exports.default = {
@@ -58,7 +58,7 @@ exports.default = {
 
   create_a_request: function create_a_request(req, res) {
     if (typeof req.body.id === 'number') {
-      req.body.Url = 'http://localhost:5000/api/v1/users/requests/' + req.body.id;
+      req.body.Url = '/api/v1/users/requests/' + req.body.id;
       global.data.push(req.body);
       return res.status(201).json({
         status: 'Success',
@@ -91,6 +91,7 @@ exports.default = {
       message: 'Not found'
     });
   },
+
   delete_a_request: function delete_a_request(req, res) {
     var id = parseInt(req.params.requestId, 10);
     for (var i = 0; i < global.data.length; i += 1) {
